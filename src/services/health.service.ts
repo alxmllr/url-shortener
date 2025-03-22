@@ -1,8 +1,10 @@
-import { IHealthService } from "../types";
+import { IHealthService } from '../types';
 
 const healthService: IHealthService = {
   getHelloMessage: async (): Promise<string> => {
-    return "Hello World";
+    // Simulating an async operation
+    await new Promise((resolve) => setTimeout(resolve, 100));
+    return 'Hello World';
   },
 };
 
